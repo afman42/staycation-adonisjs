@@ -1,0 +1,19 @@
+<!-- {{ inspect(item[0].images[0].imageUrl)}} -->
+<div class="tab-pane fade show active" id="show-image" role="tabpanel" aria-labelledby="home-tab">
+  <!-- DataTales Example -->
+  <div class="row">
+    <!-- <% for(let x = 0; x < item.imageId.length; x++){ %> -->
+    @each((image, index) in item[0].images)
+    <div class="col-md-4">
+      <div class="card shadow mb-4 mt-2">
+        <div class="card-body">
+          <img src="/admin/{{ image.imageUrl }}" alt="image"
+            style="width: 100%; display: block;">
+        </div>
+      </div>
+    </div>
+    @end
+   <!-- <% } %>-->
+  </div>
+  <a href="/admin/item" class="btn btn-warning">Back</a>
+</div>

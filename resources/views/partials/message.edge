@@ -1,0 +1,5 @@
+@if(flashMessages.has('alert.message'))
+<div class="alert alert-{{ flashMessages.get('alert.status') }}" role="alert">
+  {{ flashMessages.get('alert.message') }}
+</div>
+@endif
